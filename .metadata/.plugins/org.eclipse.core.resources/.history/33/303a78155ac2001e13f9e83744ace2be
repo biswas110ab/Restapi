@@ -1,0 +1,47 @@
+package OAuthPojo;
+
+public class ResponsePojo {
+	private String instructor;
+	private String uri;
+	private String services;
+	private String expertise;
+	private String courses;
+	private String linkedIn;
+	public String getInstructor() {
+		return instructor;
+	}
+	public void setInstructor(String instructor) {
+		this.instructor = instructor;
+	}
+	public String getUri() {
+		return uri;
+	}
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
+	public String getServices() {
+		return services;
+	}
+	public void setServices(String services) {
+		this.services = services;
+	}
+	public String getExpertise() {
+		return expertise;
+	}
+	public void setExpertise(String expertise) {
+		this.expertise = expertise;
+	}
+	public String getCourses() {
+		return courses;
+	}
+	public void setCourses(String courses) {
+		this.courses = courses;
+	}
+	public String getLinkedIn() {
+		return linkedIn;
+	}
+	public void setLinkedIn(String linkedIn) {
+		this.linkedIn = linkedIn;
+	}
+
+}

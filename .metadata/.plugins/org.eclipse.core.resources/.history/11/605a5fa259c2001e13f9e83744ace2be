@@ -1,0 +1,9 @@
+package OAuthPojo;
+
+public class CoursesPojo {
+
+	private String webAutomation;
+	private String api;
+	private String mobile;
+	
+}

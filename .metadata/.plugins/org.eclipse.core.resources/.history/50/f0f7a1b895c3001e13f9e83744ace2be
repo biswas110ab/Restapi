@@ -1,0 +1,17 @@
+package EcommerceProject;
+
+import java.util.List;
+
+public class OrderDetails {
+
+private List<Orders> om;
+
+public List<Orders> getOm() {
+	return om;
+}
+
+public void setOm(List<Orders> om) {
+	this.om = om;
+}
+
+}

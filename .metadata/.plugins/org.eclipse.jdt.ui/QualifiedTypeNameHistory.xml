@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="files.Payload"/>
+    <fullyQualifiedTypeName name="files.Resuable"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="io.restassured.filter.session.SessionFilter"/>
+    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
+    <fullyQualifiedTypeName name="OAuthPojo.WebAutomation"/>
+    <fullyQualifiedTypeName name="OAuthPojo.Mobile"/>
+    <fullyQualifiedTypeName name="OAuthPojo.ResponsePojo"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="OAuthPojo.Seriali"/>
+    <fullyQualifiedTypeName name="OAuthPojo.Location"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="io.restassured.builder.ResponseSpecBuilder"/>
+    <fullyQualifiedTypeName name="EcommerceProject.LoginPage"/>
+    <fullyQualifiedTypeName name="EcommerceProject.LoginResponse"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
+    <fullyQualifiedTypeName name="io.restassured.builder.RequestSpecBuilder"/>
+    <fullyQualifiedTypeName name="io.restassured.http.ContentType"/>
+    <fullyQualifiedTypeName name="EcommerceProject.Orders"/>
+    <fullyQualifiedTypeName name="EcommerceProject.OrderDetails"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

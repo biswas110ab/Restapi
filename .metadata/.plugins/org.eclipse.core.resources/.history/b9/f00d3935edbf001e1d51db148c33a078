@@ -1,0 +1,15 @@
+package JiraTestCase;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+public class JiraTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+RestAssured.baseURI="http://localhost:8080";
+	}
+
+}

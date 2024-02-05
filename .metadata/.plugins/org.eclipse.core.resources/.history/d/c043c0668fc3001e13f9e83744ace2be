@@ -1,0 +1,44 @@
+package EcommerceProject;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import java.io.File;
+
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
+public class EcommerceApiTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
+.setContentType(ContentType.JSON).build();
+LoginPage lp=new LoginPage();
+lp.setUserEmail("biswas110ab@gmail.com");
+lp.setUserPassword("Dimbak@123");
+RequestSpecification log = given().log().all().spec(req).body(lp);
+LoginResponse loginResponse = log.when().post("/api/ecom/auth/login").then().log().all()
+.extract().response().as(LoginResponse.class);
+System.out.println(loginResponse.getToken());
+System.out.println(loginResponse.getUserId());
+
+
+RequestSpecification addProductBasePage = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
+.addHeader("Authorization", loginResponse.getToken())
+.addHeader("Content-Type","multipart/form-data")
+.build();
+
+RequestSpecification reqAddProduct = given().log().all().spec(addProductBasePage).formParam("productName", "qwerty")
+.formParam("productAddedBy",loginResponse.getUserId())
+.formParam("productCategory", "fashion")
+.formParam("productSubCategory", "shirts")
+.formParam("productPrice", "11500")
+.formParam("productDescription", "Addias Originals")
+.formParam("productFor", "women")
+.multiPart("productImage",new File("/ProjRest/src/test/java/EcommerceProject/pexels-mnz-1598505.jpg"));
+
+	}
+
+}

@@ -1,0 +1,17 @@
+import files.Payload;
+import io.restassured.path.json.JsonPath;
+
+public class ComplexPayload {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JsonPath js=new JsonPath(Payload.CoursePrice());
+		//size method applies only on array to get the count
+		int count = js.getInt("courses.size()");
+		System.out.println(count);
+		int purchaseAmount=js.getInt("dashboard.purchaseAmount");
+		System.out.println(purchaseAmount);
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package OAuthPojo;
+
+public class ResponsePojo {
+
+}

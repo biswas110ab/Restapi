@@ -1,0 +1,35 @@
+package JiraTestCase;
+
+import io.restassured.RestAssured;
+import io.restassured.filter.session.SessionFilter;
+
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+public class JiraTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RestAssured.baseURI="http://localhost:8080";
+		//Login session
+		//we will use session filter to store session and in order 
+		//to use it we will pass filter and inside that pass session before when
+		SessionFilter session=new SessionFilter();
+		String sessionresponse=given().log().all().header("Content-Type", "application/json").body("{ \"username\": \"dimbak\", \"password\": \"dipanker@123\" }")
+				.filter(session).when().post("/rest/auth/1/session").then().log().all().extract().body().asString();
+		//to add comments in jira
+		given().log().all().header("Content-Type", "application/json").pathParam("Key", "10100")
+		.body("{\r\n"
+				+ "    \"body\": \"Value added from jira project\",\r\n"
+				+ "    \"visibility\": {\r\n"
+				+ "        \"type\": \"role\",\r\n"
+				+ "        \"value\": \"Administrators\"\r\n"
+				+ "    }\r\n"
+				+ "}").filter(session).when().post("/rest/api/2/issue/{Key}/comment")
+		.then().log().all().assertThat().statusCode(201);
+		//add attachment
+		given().
+	}
+
+}
